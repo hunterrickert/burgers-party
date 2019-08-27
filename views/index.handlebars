@@ -1,38 +1,54 @@
 <h1>BURGER PARTY!</h1>
+<div class="container">
+  <div class="row">
 
-<h2>Burgers that need to be eaten!!</h2>
 
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-      {{> burgers/burger-block devour=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
+    <div class="col-4">
+      <h2>Burgers that need to be eaten!!</h2>
 
-<h2>Burgers that have been devoured!</h2>
 
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
-      {{> burgers/burger-block devour=false}}
-    {{/if}}
-  {{/each}}
-</ul>
+      <ul>
+        {{#each burgers}}
+        {{#unless devoured}}
+        {{> burgers/burger-block devour=true}}
+        {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
 
-<h2>Add a Burger</h2>
-<form class="create-form">
+    <div class="col-4 formLook">
 
-  <div class="form-group">
-    <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="name">
+
+      <h2>Add a Burger</h2>
+      <form class="create-form">
+
+        <div class="form-group">
+          <label for="ca">Burger Name:</label>
+          <input type="text" id="ca" name="name">
+        </div>
+
+        <div class="form-group">
+          <label for="devoured">Hungry?</label><br>
+          <input type="radio" name="devoured" value="0"> ready to eat!<br>
+          <input type="radio" name="devoured" value="1"> devoured
+        </div>
+
+        <button type="submit">Add Burger</button>
+      </form>
+    </div>
+
+    <div class="col-4">
+
+      <h2>Burgers that have been devoured!</h2>
+
+      <ul>
+        {{#each burgers}}
+        {{#if devoured}}
+        {{> burgers/burger-block devour=false}}
+        {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+
   </div>
-
-  <div class="form-group">
-    <label for="devoured">Hungry?</label><br>
-    <input type="radio" name="devoured" value="0"> ready to eat!<br>
-    <input type="radio" name="devoured" value="1"> devoured
-  </div>
-
-  <button type="submit">Add Burger</button>
-</form>
+</div>

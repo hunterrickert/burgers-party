@@ -1,10 +1,24 @@
-<h1>BURGER PARTY!</h1>
+<h1 class="headings">BURGER PARTY!</h1><br>
 <div class="container">
+
+  <div class="row">
+    <div class="col-4">
+      <h2 class="headings">Burgers that need to be eaten!!</h2>
+    </div>
+    <div class="col-4">
+      <h2 class="headings">Add a Burger</h2>
+    </div>
+    <div class="col-4">
+      <h2 class="headings">Burgers that have been devoured!</h2>
+    </div>
+  </div>
+
+
   <div class="row">
 
 
     <div class="col-4">
-      <h2>Burgers that need to be eaten!!</h2>
+
 
 
       <ul>
@@ -16,11 +30,11 @@
       </ul>
     </div>
 
-    <div class="col-4 formLook">
+
+    <div class="col-4">
 
 
-      <h2>Add a Burger</h2>
-      <form class="create-form">
+      <form class="create-form formLook">
 
         <div class="form-group">
           <label for="ca">Burger Name:</label>
@@ -39,7 +53,7 @@
 
     <div class="col-4">
 
-      <h2>Burgers that have been devoured!</h2>
+
 
       <ul>
         {{#each burgers}}
@@ -50,5 +64,17 @@
       </ul>
     </div>
 
+  </div>
+
+  <div class="row">
+    <div class="col-4">
+
+    </div>
+    <div class="col-4">
+      
+    </div>
+    <div class="col-4">
+
+    </div>
   </div>
 </div>

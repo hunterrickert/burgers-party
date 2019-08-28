@@ -2,10 +2,16 @@ body {
     background: lightblue;
 }
 
-li {
+.headings {
+    text-align: center;
+}
+
+li, .formLook {
     padding: 5px;
     margin: 5px;
     background: #faebd7;
+    text-align: center;
+
 
   }
 
